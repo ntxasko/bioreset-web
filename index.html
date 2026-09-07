@@ -349,7 +349,131 @@
       font-size: 18px;
       color: var(--gris);
     }
+.director-role {
+  font-size: 18px;
+  color: var(--verde);
+  margin-bottom: 28px;
+}
 
+.photo-box {
+  position: relative;
+  min-height: 540px;
+  padding: 0;
+  overflow: hidden;
+  background: var(--salvia);
+  display: block;
+}
+
+.director-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.photo-caption {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  background: rgba(255,255,255,0.92);
+  padding: 14px 16px;
+  border-radius: 7px;
+  color: var(--verde-profundo);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.photo-caption strong {
+  font-size: 17px;
+}
+
+.photo-caption span {
+  font-size: 13px;
+  color: var(--gris);
+}
+
+.expertise-title {
+  margin-top: 42px;
+  margin-bottom: 18px;
+  color: var(--verde);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.expertise-item {
+  border: 1px solid var(--borde);
+  background: #fafaf6;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.expertise-item strong {
+  display: block;
+  color: var(--verde-profundo);
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.expertise-item span {
+  display: block;
+  color: var(--gris);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.academic-statement {
+  margin-top: 35px;
+  padding: 24px;
+  background: var(--crema);
+  border-left: 3px solid var(--verde);
+}
+
+.academic-statement p {
+  margin: 0 0 12px;
+  font-size: 16px;
+  color: var(--verde-profundo);
+}
+
+.academic-statement p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 850px) {
+  .photo-box,
+  .director-photo {
+    min-height: 460px;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .photo-box,
+  .director-photo {
+    min-height: 380px;
+  }
+
+  .photo-caption {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+  }
+}
+    
     /* CERTIFICATION */
     .cert-box {
       max-width: 900px;
@@ -756,8 +880,17 @@
 <section class="section-light">
   <div class="container director">
 
-    <div class="director-box">
-      <span>Nayra Txasko · Dirección académica</span>
+    <div class="director-box photo-box">
+      <img
+        src="nayra-txasko.jpg"
+        alt="Nayra Txasko, dirección académica de Bioreset"
+        class="director-photo"
+      >
+
+      <div class="photo-caption">
+        <strong>Nayra Txasko</strong>
+        <span>Dirección académica · Bioreset</span>
+      </div>
     </div>
 
     <div class="director-text">
@@ -768,22 +901,127 @@
         Nayra Txasko
       </h2>
 
-      <p>
-        Dirección académica de Bioreset y responsable del desarrollo de
-        la formación especializada.
+      <p class="director-role">
+        <strong>Bióloga · Investigadora · Docente · Divulgadora científica</strong><br>
+        Formación investigadora doctoral · Dirección académica de Bioreset
       </p>
 
       <p>
-        Desde Bioreset se desarrollan programas orientados a integrar
-        información nutricional, fisiológica y funcional y a trasladarla
-        al análisis de situaciones prácticas.
+        Nayra Txasko es bióloga, investigadora y divulgadora científica,
+        con formación investigadora de nivel doctoral y una trayectoria
+        desarrollada en los ámbitos de la biología, genética molecular,
+        biología evolutiva, filogenética y ciencias biomédicas.
       </p>
 
       <p>
-        La Certificación en Microbioma Humano nace con el objetivo de ofrecer
-        una formación estructurada y profunda que permita conectar conocimientos,
-        comprender relaciones y desarrollar capacidad de razonamiento profesional.
+        Su recorrido combina <strong>investigación científica, docencia
+        universitaria, experiencia internacional y divulgación</strong>,
+        con una especialización progresiva en la comprensión de las
+        relaciones entre los diferentes sistemas biológicos y su
+        aplicación al ámbito de la salud.
       </p>
+
+      <p>
+        Durante su etapa investigadora fue beneficiaria de una
+        <strong>beca FPI del Ministerio de Ciencia y Tecnología</strong>
+        y desarrolló investigación en la Universitat de Barcelona,
+        obteniendo el <strong>Diploma de Estudios Avanzados (DEA)</strong>
+        y participando en proyectos vinculados a genética evolutiva,
+        filogenética y procesos de diversificación.
+      </p>
+
+      <p>
+        Posteriormente desarrolló experiencia internacional como
+        <strong>Visiting Researcher en la University of California,
+        Berkeley</strong>, combinando investigación y actividad docente.
+      </p>
+
+      <p>
+        También ha desarrollado actividad investigadora en el ámbito
+        hospitalario, participando en proyectos relacionados con
+        <strong>genética molecular y terapia génica aplicada a la
+        investigación biomédica</strong>.
+      </p>
+
+      <p>
+        Su trayectoria docente incluye <strong>docencia universitaria,
+        formación de posgrado y actividades de formación especializada</strong>,
+        además de masterclasses y divulgación científica.
+      </p>
+
+      <p>
+        Paralelamente, ha desarrollado una amplia actividad de
+        <strong>divulgación científica</strong> en áreas como genética,
+        epigenética, bioquímica, metabolismo, nutrición y microbioma,
+        así como participación en medios de comunicación, conferencias
+        y actividades formativas.
+      </p>
+
+      <p>
+        Es autora del libro
+        <strong><em>Bioquímica en la cocina (Salud)</em></strong>.
+      </p>
+
+      <div class="expertise-title">
+        ÁREAS DE EXPERIENCIA
+      </div>
+
+      <div class="expertise-grid">
+
+        <div class="expertise-item">
+          <strong>Biología y ciencias biomédicas</strong>
+          <span>Base científica e investigadora.</span>
+        </div>
+
+        <div class="expertise-item">
+          <strong>Genética y biología molecular</strong>
+          <span>Investigación y comprensión de mecanismos biológicos.</span>
+        </div>
+
+        <div class="expertise-item">
+          <strong>Biología evolutiva</strong>
+          <span>Trayectoria científica e investigadora.</span>
+        </div>
+
+        <div class="expertise-item">
+          <strong>Docencia universitaria</strong>
+          <span>Grado, posgrado y formación especializada.</span>
+        </div>
+
+        <div class="expertise-item">
+          <strong>Divulgación científica</strong>
+          <span>Comunicación de ciencia para profesionales y público.</span>
+        </div>
+
+        <div class="expertise-item">
+          <strong>Bioquímica y metabolismo</strong>
+          <span>Integración de procesos bioquímicos y metabólicos.</span>
+        </div>
+
+        <div class="expertise-item">
+          <strong>Microbioma y ecosistemas biológicos</strong>
+          <span>Comprensión del microbioma desde una visión de ecosistema.</span>
+        </div>
+
+        <div class="expertise-item">
+          <strong>Nutrición funcional e integración fisiológica</strong>
+          <span>Conexión entre nutrición, fisiología y salud.</span>
+        </div>
+
+      </div>
+
+      <div class="academic-statement">
+        <p>
+          <strong>Una formación en microbioma necesita una base científica
+          sólida, capacidad para conectar mecanismos y experiencia para
+          traducir conocimiento complejo en comprensión práctica.</strong>
+        </p>
+
+        <p>
+          Esa es la perspectiva desde la que nace la
+          <strong>Certificación Bioreset en Microbioma Humano.</strong>
+        </p>
+      </div>
 
     </div>
 
